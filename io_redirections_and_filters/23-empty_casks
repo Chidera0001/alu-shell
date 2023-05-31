@@ -1,2 +1,3 @@
 #!/bin/bash
-find . -type f -empty -exec sh -c 'printf "%s\n" "${0##*/}"' {} \; ; find . -type d -empty -exec sh -c 'printf "%s\n" "${0##*/}"' {} \;
+find . -type f -empty -exec printf "%s\n" {} + | xargs -I{} basename {} ; find . -type d -empty -exec printf "%s\n" {} + | xargs -I{} basename {}
+
