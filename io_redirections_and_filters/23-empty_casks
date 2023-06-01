@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -empty -exec printf "%s\n" {} + | xargs -I{} basename {} ; find . -type d -empty -exec printf "%s\n" {} + | xargs -I{} basename }
+find . -empty | rev | cut -d "/" -f 1 | rev
